@@ -31,7 +31,7 @@ class Main{
               }else if(list.equals("go")){
                  
                 
-                   viewLists();
+                   choiceLists(scanner);
                    break;
               
                  } else {
@@ -43,13 +43,40 @@ class Main{
         }while(choice == true);
       }
 
-      private static void removeLists(Scanner scanenr){
+      private static void removeLists(Scanner scanner){
 
+         boolean yes = true;
+
+         while(yes){
+
+            System.out.print("Enter the list you want to delete.");
+            String delete = scanner.nextLine();
+
+             Lists.todo.remove(delete);
+              
+                if(delete.equals("stop")){
+                   
+                   yes = false;
+
+                   choiceLists(scanner);
+                   
+                }
+
+         }
+         
 
       }
 
       private static void choiceLists(Scanner scanner){
 
+         System.out.println("Welcome Aboard to your Todolist Center!");
+
+         System.out.println("Choose your action:");
+  
+         System.out.println("1. Add Lists");
+         System.out.println("2. Remove Lists");
+         System.out.println("3. View Lists");
+         
         try {
         
             System.out.print("Enter your choice: ");
@@ -69,7 +96,7 @@ class Main{
        
                   System.out.println("Integers Number Only!!");      
                    
-                   
+                   choiceLists(scanner);
     
                     }
            
@@ -80,14 +107,7 @@ class Main{
    
        Scanner scanner = new Scanner(System.in);
 
-       System.out.println("Welcome Aboard to your Todolist Center!");
-
-       System.out.println("Choose your action:");
-
-       System.out.println("1. Add Lists");
-       System.out.println("2. Remove Lists");
-       System.out.println("3. View Lists");
-
+   
        choiceLists(scanner);
     
 
