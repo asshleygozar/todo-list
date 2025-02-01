@@ -1,11 +1,11 @@
-#To-Do List in Commandline
+# To-Do List in Commandline
 
 ## Just simple To-do list in commandline
 
-## Using:
+### Using:
 
-## looping
-## Arraylist
-## Scanner
-## Exception Handling
-## Encapsulation
+- looping
+- Arraylist
+- Scanner
+- Exception Handling
+- Encapsulation
