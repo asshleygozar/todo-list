@@ -10,44 +10,40 @@ class Main{
 
             System.out.println("> " + all);
          }
-      }
+    }
 
-   
      private static void addLists(Scanner scanner){
 
         boolean choice = true;
 
-        do{
+        do {
+            System.out.print("> ");
+            String list = scanner.nextLine();
  
-         System.out.print("> ");
-         String list = scanner.nextLine();
+            Lists.todo.add(list);
  
-         Lists.todo.add(list);
- 
-           if(list.equals("exit")){
+           if (list.equals("exit")) {
  
               choice = false;
            
-              }else if(list.equals("go")){
-                 
-                
-                   choiceLists(scanner);
-                   break;
-              
-                 } else {
+           } else if(list.equals("go")) {      
+         
+              choiceLists(scanner);
+               break;
+
+           } else {
              
               choice = true;
  
-                   }
- 
-        }while(choice == true);
+              }
+          } while (choice == true);
       }
 
-      private static void removeLists(Scanner scanner){
+      private static void removeLists(Scanner scanner) {
 
          boolean yes = true;
 
-         while(yes){
+         while(yes) {
 
             System.out.print("Enter the list you want to delete.");
             String delete = scanner.nextLine();
@@ -58,13 +54,9 @@ class Main{
                    
                    yes = false;
 
-                   choiceLists(scanner);
-                   
-                }
-
-         }
-         
-
+                   choiceLists(scanner); 
+              }
+          }
       }
 
       private static void choiceLists(Scanner scanner){
@@ -91,28 +83,19 @@ class Main{
              case 3 -> viewLists();
           
      
-                }
+              }
           } catch (java.util.InputMismatchException e) {
        
-                  System.out.println("Integers Number Only!!");      
-                   
-                   choiceLists(scanner);
+            System.out.println("Integers Number Only!!");          
+            choiceLists(scanner);
     
-                    }
-           
-     
-
+          }
       }
     public static void main(String[]args){
    
        Scanner scanner = new Scanner(System.in);
-
-   
        choiceLists(scanner);
-    
 
        scanner.close();
     }
-
-
 }
