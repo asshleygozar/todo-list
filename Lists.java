@@ -1,5 +1,3 @@
-package Todolist_Commandline;
-
 import java.util.ArrayList;
 
 public class Lists {
