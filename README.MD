@@ -1,11 +1,9 @@
-# To-Do List in Commandline
+# Done
 
-## Just simple To-do list in commandline
+## A productive tool use to track daily, weekly, and monthly tasks.
 
-### Using:
-
-- looping
-- Arraylist
-- Scanner
-- Exception Handling
-- Encapsulation
+### Technologies
+<img align="left"  alt="Html" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+<img align="left"  alt="Css" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />          
+<img align="left"  alt="Javascript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+<img align="left"  alt="Javascript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
