@@ -1,6 +1,5 @@
 # Done
-
-## A productive tool use to track daily, weekly, and monthly tasks.
+A productive tool use to track daily, weekly, and monthly tasks.
 
 ### Technologies
 <img align="left"  alt="Html" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
