@@ -3,7 +3,7 @@ const todoLists = [];
 
 class Todo {
     constructor(title, description="", dueDate, priority) {
-        this.id = 1;
+        this.id = crypto.randomUUID();
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
@@ -83,6 +83,7 @@ const todoUpdater = new TodoUpdater(1);
 todoLists.push(myTodo);
 console.log(todoLists);
 todoUpdater.updatePriority(5);
+todoUpdater.updateDescription("Use sword");
 console.log(todoLists);
 
 
