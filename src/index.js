@@ -1,5 +1,5 @@
 import "./styles.css";
-
+import { addTodoDom } from "./todo-generator";
 
 const todoLists = [];
 
@@ -78,15 +78,15 @@ class TodoUpdater {
 
 
 
-const myTodo = new Todo("Cleaning","use broom","2025-06-10", 4);
-const todoGenerator = new TodoGenerator();
-const todoUpdater = new TodoUpdater(1);
+// const myTodo = new Todo("Cleaning","use broom","2025-06-10", 4);
+// const todoGenerator = new TodoGenerator();
+// const todoUpdater = new TodoUpdater(1);
 
-todoLists.push(myTodo);
-console.log(todoLists);
-todoUpdater.updatePriority(5);
-todoUpdater.updateDescription("Use sword");
-console.log(todoLists);
+// todoLists.push(myTodo);
+// console.log(todoLists);
+// todoUpdater.updatePriority(5);
+// todoUpdater.updateDescription("Use sword");
+// console.log(todoLists);
 
 
 
