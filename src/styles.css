@@ -1,4 +1,13 @@
-body {
+
+#addTodo {
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
     background-color: rebeccapurple;
+    color: white;
+    font-size: 20px;
 }
 
+body {
+    background-color: chartreuse;
+}
