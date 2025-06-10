@@ -5,22 +5,83 @@ const todoBox = document.createElement("div");
 const todoTitle = document.createElement("p");
 const todoDescription = document.createElement("p");
 const todoPriority = document.createElement("p");
-const buttonContainer = document.createElement("option");
+const buttonContainer = document.createElement("div");
+const highPriority = document.createElement("option");
 const mediumPriority = document.createElement("option");
 const lowPriority = document.createElement("option");
 
 // Todo List Modal Add Card
-const addModalBox = document.createElement("div");
-const addTaskNameLabel = document.createElement("label");
-const addTaskNameInput = document.createElement("input");
-const addTaskDescriptionLabel = document.createElement("label");
-const addTaskDescriptionInput = document.createElement("input");
-const addPriorityLabel = document.createElement("label");
-const addTodoPriority = document.createElement("select");
-const addHighPriority = document.createElement("option");
-const addMediumPriority = document.createElement("option");
-const addLowPriority = document.createElement("option");
+const modalBox = document.createElement("div");
+const taskNameLabel = document.createElement("label");
+const taskNameInput = document.createElement("input");
+const taskDescriptionLabel = document.createElement("label");
+const taskDescriptionInput = document.createElement("textarea");
+const taskPriorityLabel = document.createElement("label");
+const taskPrioritySelect = document.createElement("select");
+const taskHighPriority = document.createElement("option");
+const taskMediumPriority = document.createElement("option");
+const taskLowPriority = document.createElement("option");
+const taskDueDateLabel = document.createElement("label");
+const taskDueDate = document.createElement("input");
+const createButtonContainer = document.createElement("div");
+const addTodoButton = document.createElement("button");
+const cancelTodoButton = document.createElement("button");
 
+
+export function addTodo() {
+    //Task Title
+    taskNameLabel.textContent = "Title";
+    taskNameLabel.htmlFor = "task-title";
+    taskNameInput.type = "text";
+    taskNameInput.placeholder = "Task title";
+    taskNameInput.name = "task-title";
+    taskNameInput.id = "task-title";
+    taskNameLabel.appendChild(taskNameInput);
+
+    // Task Description
+    taskDescriptionLabel.textContent = "Description";
+    taskDescriptionLabel.htmlFor = "task-description";
+    taskDescriptionInput.name = "task-description";
+    taskDescriptionInput.placeholder = "Description";
+    taskDescriptionInput.id = "task-description";
+    taskDescriptionLabel.appendChild(taskDescriptionInput);;
+
+    // Task Priority
+    taskPriorityLabel.htmlFor = "task-priority";
+    taskPrioritySelect.name = "task-priority";
+    taskPrioritySelect.id = "task-priority";
+    taskHighPriority.textContent = "High Priority";
+    taskHighPriority.value = "high-priority"
+    taskMediumPriority.textContent = "Medium Priority";
+    taskMediumPriority.value = "medium-priority";
+    taskLowPriority.textContent = "Low Priority";
+    taskLowPriority.value = "low-priority";
+    taskPrioritySelect.appendChild(taskHighPriority);
+    taskPrioritySelect.appendChild(taskMediumPriority);
+    taskPrioritySelect.appendChild(taskLowPriority);
+    taskPriorityLabel.appendChild(taskPrioritySelect);
+
+    // Task Due Date
+    taskDueDateLabel.textContent = "Due Date";
+    taskDueDate.type = "date";
+    taskDueDate.name = "task-due-date";
+    taskDueDate.id = "task-due-date";
+    taskDueDateLabel.appendChild(taskDueDate);
+
+    // Create and Cancel Buttons
+    addTodoButton.id = "add-task";
+    cancelTodoButton.id = "cancel";
+    createButtonContainer.appendChild(addTodoButton);
+    createButtonContainer.appendChild(cancelTodoButton);
+
+    modalBox.appendChild(taskNameLabel);
+    modalBox.appendChild(taskDescriptionLabel);
+    modalBox.appendChild(taskPriorityLabel);
+    modalBox.appendChild(taskDueDateLabel);
+    modalBox.appendChild(createButtonContainer);
+
+    return modalBox;
+}
 
 
 
