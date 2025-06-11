@@ -1,13 +1,63 @@
 
-#addTodo {
-    height: 200px;
-    width: 200px;
+#new-todo-button {
+    height: 100px;
+    width: 100px;
     border-radius: 4px;
     background-color: rebeccapurple;
     color: white;
-    font-size: 20px;
+    font-size: 50px;
 }
 
 body {
     background-color: chartreuse;
+    font-family: monospace;
 }
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 320px;
+    width: 250px;
+    padding: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: fixed;
+    top: 100px;
+    left: 500px;
+    visibility: visible;
+}
+
+#modal-invisible {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 320px;
+    width: 250px;
+    padding: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: fixed;
+    top: 100px;
+    left: 500px;
+    visibility: hidden;
+}
+
+#modal > div {
+   display: flex;
+   justify-content: space-between;
+}
+
+.todo-item {
+    width: 200px;
+    height: 280px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
