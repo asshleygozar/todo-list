@@ -1,16 +1,5 @@
 const contentContainer = document.getElementById("content");
 
-// Todo List Card
-const todoBox = document.createElement("div");
-const todoTitle = document.createElement("p");
-const todoDescription = document.createElement("p");
-const todoPriority = document.createElement("p");
-const buttonContainer = document.createElement("div");
-const highPriority = document.createElement("option");
-const mediumPriority = document.createElement("option");
-const lowPriority = document.createElement("option");
-
-
 
 export function addTodoDom() {
 
@@ -88,6 +77,27 @@ export function addTodoDom() {
    return modalBox;
 }
 
+export function taskDetails() {
+    // Todo List Card
+    const todoBox = document.createElement("div");
+    const todoTitle = document.createElement("p");
+    const todoDescription = document.createElement("p");
+    const todoPriority = document.createElement("p");
+    const todoDueDate = document.createElement("p");
+
+    todoTitle.classList = "task-title";
+    todoDescription.classList = "task-description";
+    todoPriority.classList = "task-priority";
+    todoDueDate.classList = "task-due-date";
+    todoBox.classList = "todo-item";
+    
+    todoBox.appendChild(todoTitle);
+    todoBox.appendChild(todoDescription);
+    todoBox.appendChild(todoPriority);
+    todoBox.appendChild(todoDueDate);
+
+    return todoBox;
+}
 
 
 
