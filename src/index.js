@@ -83,8 +83,6 @@ class TodoUpdater {
     }
 }
 
-
-
 // const myTodo = new Todo("Cleaning","use broom","2025-06-10", 4);
 // const todoGenerator = new TodoGenerator();
 // const todoUpdater = new TodoUpdater(1);
@@ -97,8 +95,7 @@ class TodoUpdater {
 
 
 addNewTodoButton.addEventListener('click', function(e) {
-    const isVisible = isModalVisible();
-    modalVisible(isVisible);
+    showModal();
     saveTodoToUI();
 });
 
@@ -119,9 +116,9 @@ function saveTodoToUI() {
         const myTodo = new Todo(taskTitle, taskDescription, taskDueDate, taskPriority);
         todoLists.push(myTodo);
         generateTodoCardUI();
-        modalVisible(isVisible);
+        hideModal();
     });
-    
+
     isSaveEventAttached = true;
 }
 
@@ -133,6 +130,15 @@ function modalVisible(visible) {
         addModal.id = "modal";
     }
 }
+
+function hideModal() {
+    modalVisible(true);
+}
+
+function showModal() {
+    modalVisible(false);
+}
+
 
 function isModalVisible() {
 
