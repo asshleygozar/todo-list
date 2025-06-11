@@ -118,7 +118,7 @@ function saveTodoToUI() {
         hideModal();
     });
 
-    cancelTask.addEventListener('click', function() {
+    cancelTask.addEventListener('click', function(e) {
         hideModal();
     });
 
