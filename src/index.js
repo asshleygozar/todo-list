@@ -4,6 +4,12 @@ import { addTodoDom } from "./todo-generator.js";
 const todoLists = [];
 const addNewTodoButton = document.getElementById("new-todo-button");
 const bodyElement = document.querySelector("body");
+const taskTitle = document.getElementById("task-title");
+const taskDescription = document.getElementById("task-description");
+const taskPriority = document.getElementById("task-priority");
+const taskDueDate = document.getElementById("task-due-date");
+const addTask = document.getElementById("add-task");
+const cancelTask = document.getElementById("cancel");
 const addModal = addTodoDom();
 
 bodyElement.appendChild(addModal);
