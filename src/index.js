@@ -5,7 +5,9 @@ const todoLists = [];
 const addNewTodoButton = document.getElementById("new-todo-button");
 const bodyElement = document.querySelector("body");
 const addModal = addTodoDom();
+
 bodyElement.appendChild(addModal);
+
 
 class Todo {
     constructor(title, description="", dueDate, priority) {
@@ -94,17 +96,20 @@ class TodoUpdater {
 
 
 addNewTodoButton.addEventListener('click', function(e) {
+    isVisible();
+});
 
+
+
+
+function isVisible() {
 
     if (addModal.id == "modal") {
         addModal.id = "modal-invisible";
     } else  {
         addModal.id = "modal";
     }
-});
-
-
-
+}
 
 
 
