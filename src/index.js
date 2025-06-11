@@ -1,5 +1,5 @@
 import "./styles.css";
-import { addTodoDom, taskDetails } from "./todo-generator.js";
+import { addTodoModalCard, taskDetails } from "./todo-generator.js";
 
 
 
@@ -147,7 +147,7 @@ class TodoUpdater {
 
 document.addEventListener('DOMContentLoaded', (e) => {
     const bodyElement = document.querySelector("body");
-    const modal = addTodoDom();
+    const modal = addTodoModalCard();
 
     const todoUIGenerator = new TodoUIGenerator(modal);
     const addNewTodoButton = document.getElementById("new-todo-button");
