@@ -135,9 +135,15 @@ function hideModal() {
 }
 
 function showModal() {
+    clearModalInputs();
     modalVisible(false);
 }
 
+function clearModalInputs() {
+    document.getElementById("task-title").value = "";
+    document.getElementById('task-description').value = "";
+    document.getElementById('task-due-date').value = "";
+}
 
 function generateTodoCardUI() {
     container.innerHTML = "";
