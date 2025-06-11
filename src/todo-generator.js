@@ -10,25 +10,27 @@ const highPriority = document.createElement("option");
 const mediumPriority = document.createElement("option");
 const lowPriority = document.createElement("option");
 
-// Todo List Modal Add Card
-const modalBox = document.createElement("div");
-const taskNameLabel = document.createElement("label");
-const taskNameInput = document.createElement("input");
-const taskDescriptionLabel = document.createElement("label");
-const taskDescriptionInput = document.createElement("textarea");
-const taskPriorityLabel = document.createElement("label");
-const taskPrioritySelect = document.createElement("select");
-const taskHighPriority = document.createElement("option");
-const taskMediumPriority = document.createElement("option");
-const taskLowPriority = document.createElement("option");
-const taskDueDateLabel = document.createElement("label");
-const taskDueDate = document.createElement("input");
-const createButtonContainer = document.createElement("div");
-const addTodoButton = document.createElement("button");
-const cancelTodoButton = document.createElement("button");
 
 
-export function addTodo() {
+export function addTodoDom() {
+
+    // Todo List Modal Add Card
+    const modalBox = document.createElement("div");
+    const taskNameLabel = document.createElement("label");
+    const taskNameInput = document.createElement("input");
+    const taskDescriptionLabel = document.createElement("label");
+    const taskDescriptionInput = document.createElement("textarea");
+    const taskPriorityLabel = document.createElement("label");
+    const taskPrioritySelect = document.createElement("select");
+    const taskHighPriority = document.createElement("option");
+    const taskMediumPriority = document.createElement("option");
+    const taskLowPriority = document.createElement("option");
+    const taskDueDateLabel = document.createElement("label");
+    const taskDueDate = document.createElement("input");
+    const createButtonContainer = document.createElement("div");
+    const addTodoButton = document.createElement("button");
+    const cancelTodoButton = document.createElement("button");
+
     //Task Title
     taskNameLabel.textContent = "Title";
     taskNameLabel.htmlFor = "task-title";
@@ -71,17 +73,23 @@ export function addTodo() {
     // Create and Cancel Buttons
     addTodoButton.id = "add-task";
     cancelTodoButton.id = "cancel";
+    addTodoButton.textContent = "Save";
+    cancelTodoButton.textContent = "Cancel";
     createButtonContainer.appendChild(addTodoButton);
     createButtonContainer.appendChild(cancelTodoButton);
 
+    modalBox.id = "modal-invisible";
     modalBox.appendChild(taskNameLabel);
     modalBox.appendChild(taskDescriptionLabel);
     modalBox.appendChild(taskPriorityLabel);
     modalBox.appendChild(taskDueDateLabel);
     modalBox.appendChild(createButtonContainer);
 
-    return modalBox;
+   return modalBox;
 }
+
+
+
 
 
 
