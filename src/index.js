@@ -1,9 +1,10 @@
 import "./styles.css";
-import { addTodoDom } from "./todo-generator.js";
+import { addTodoDom, taskDetails } from "./todo-generator.js";
 
 const todoLists = [];
 const addNewTodoButton = document.getElementById("new-todo-button");
 const bodyElement = document.querySelector("body");
+const container = document.getElementById("content");
 const addModal = addTodoDom();
 
 bodyElement.appendChild(addModal);
@@ -101,7 +102,10 @@ addNewTodoButton.addEventListener('click', function(e) {
     saveTodoToUI();
 });
 
+let isSaveEventAttached = false;
+
 function saveTodoToUI() {
+    if (isSaveEventAttached) return;
     const addTask = document.getElementById("add-task");
     const cancelTask = document.getElementById("cancel");
 
@@ -114,11 +118,11 @@ function saveTodoToUI() {
 
         const myTodo = new Todo(taskTitle, taskDescription, taskDueDate, taskPriority);
         todoLists.push(myTodo);
-        console.log(todoLists);
+        generateTodoCardUI();
         modalVisible(isVisible);
     });
-
     
+    isSaveEventAttached = true;
 }
 
 function modalVisible(visible) {
@@ -138,5 +142,24 @@ function isModalVisible() {
 }
 
 
+function generateTodoCardUI() {
+    container.innerHTML = "";
+    
+    for (let task of todoLists) {
+        
+            const card = taskDetails();
 
+            const todoTitle = card.querySelector(".task-title");
+            const todoDescription = card.querySelector(".task-description");
+            const todoPriority = card.querySelector(".task-priority");
+            const todoDueDate = card.querySelector(".task-due-date");
 
+            card.id = task.id;
+            todoTitle.textContent = task.title;
+            todoDescription.textContent = task.description;
+            todoPriority.textContent = task.priority;
+            todoDueDate.textContent = task.dueDate;
+        
+           container.appendChild(card);
+    } 
+}
