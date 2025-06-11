@@ -118,6 +118,10 @@ function saveTodoToUI() {
         hideModal();
     });
 
+    cancelTask.addEventListener('click', function() {
+        hideModal();
+    });
+
     isSaveEventAttached = true;
 }
 
