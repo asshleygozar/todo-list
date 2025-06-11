@@ -4,12 +4,6 @@ import { addTodoDom } from "./todo-generator.js";
 const todoLists = [];
 const addNewTodoButton = document.getElementById("new-todo-button");
 const bodyElement = document.querySelector("body");
-const taskTitle = document.getElementById("task-title");
-const taskDescription = document.getElementById("task-description");
-const taskPriority = document.getElementById("task-priority");
-const taskDueDate = document.getElementById("task-due-date");
-const addTask = document.getElementById("add-task");
-const cancelTask = document.getElementById("cancel");
 const addModal = addTodoDom();
 
 bodyElement.appendChild(addModal);
@@ -25,19 +19,19 @@ class Todo {
     }
 }
 
-class TodoGenerator {
-    constructor() {
-        this.todolist = [];
-    }
+// class TodoGenerator {
+//     constructor() {
+//         this.todolist = [];
+//     }
 
-    addTodo(todo) {
-        this.todolist.push(todo);
-    }
+//     addTodo(todo) {
+//         this.todolist.push(todo);
+//     }
 
-    printTodo() {
-        console.log(this.todolist);
-    }
-}
+//     printTodo() {
+//         console.log(this.todolist);
+//     }
+// }
 
 class TodoUpdater {
     
@@ -102,19 +96,45 @@ class TodoUpdater {
 
 
 addNewTodoButton.addEventListener('click', function(e) {
-    isVisible();
+    const isVisible = isModalVisible();
+    modalVisible(isVisible);
+    saveTodoToUI();
 });
 
+function saveTodoToUI() {
+    const addTask = document.getElementById("add-task");
+    const cancelTask = document.getElementById("cancel");
 
+    addTask.addEventListener('click', function(e) {
+        const isVisible = isModalVisible();
+        const taskTitle = document.getElementById("task-title").value;
+        const taskDescription = document.getElementById("task-description").value;
+        const taskPriority = document.getElementById("task-priority").value;
+        const taskDueDate = document.getElementById("task-due-date").value;
 
+        const myTodo = new Todo(taskTitle, taskDescription, taskDueDate, taskPriority);
+        todoLists.push(myTodo);
+        console.log(todoLists);
+        modalVisible(isVisible);
+    });
 
-function isVisible() {
+    
+}
 
-    if (addModal.id == "modal") {
+function modalVisible(visible) {
+
+    if (visible) {
         addModal.id = "modal-invisible";
-    } else  {
+    } else {
         addModal.id = "modal";
     }
+}
+
+function isModalVisible() {
+
+    let checkVisible = addModal.id == "modal" ? true : false;
+
+    return checkVisible;
 }
 
 
