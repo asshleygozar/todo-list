@@ -1,7 +1,7 @@
 const contentContainer = document.getElementById("content");
 
 
-export function addTodoDom() {
+export function addTodoModalCard() {
 
     // Todo List Modal Add Card
     const modalBox = document.createElement("div");
