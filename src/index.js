@@ -1,7 +1,11 @@
 import "./styles.css";
-import { addTodoDom } from "./todo-generator";
+import { addTodoDom } from "./todo-generator.js";
 
 const todoLists = [];
+const addNewTodoButton = document.getElementById("new-todo-button");
+const bodyElement = document.querySelector("body");
+const addModal = addTodoDom();
+bodyElement.appendChild(addModal);
 
 class Todo {
     constructor(title, description="", dueDate, priority) {
@@ -87,6 +91,19 @@ class TodoUpdater {
 // todoUpdater.updatePriority(5);
 // todoUpdater.updateDescription("Use sword");
 // console.log(todoLists);
+
+
+addNewTodoButton.addEventListener('click', function(e) {
+
+
+    if (addModal.id == "modal") {
+        addModal.id = "modal-invisible";
+    } else  {
+        addModal.id = "modal";
+    }
+});
+
+
 
 
 
