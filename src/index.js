@@ -107,7 +107,6 @@ function saveTodoToUI() {
     const cancelTask = document.getElementById("cancel");
 
     addTask.addEventListener('click', function(e) {
-        const isVisible = isModalVisible();
         const taskTitle = document.getElementById("task-title").value;
         const taskDescription = document.getElementById("task-description").value;
         const taskPriority = document.getElementById("task-priority").value;
@@ -137,14 +136,6 @@ function hideModal() {
 
 function showModal() {
     modalVisible(false);
-}
-
-
-function isModalVisible() {
-
-    let checkVisible = addModal.id == "modal" ? true : false;
-
-    return checkVisible;
 }
 
 
