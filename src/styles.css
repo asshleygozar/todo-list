@@ -10,14 +10,24 @@
     padding: 0;
 }
 
+:root {
+  --accent-red: #F28B82;
+  --accent-green: #A8D5BA;
+  --accent-blue: #AECBFA;
+  --accent-yellow: #FDDFAF;
 
+  --bg-color: #FFFDF9;
+  --text-color: #2D2D2D;
+  --card-bg:#FFFFFF;
+  --border-color: #EDEDED;
+}
 
 
 #new-todo-button {
     height: 100px;
     width: 100px;
     border-radius: 4px;
-    background-color: rebeccapurple;
+    background-color: var(--accent-red);
     color: white;
     font-size: 50px;
     position: fixed;
