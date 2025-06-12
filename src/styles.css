@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *::before,
 *::after,
@@ -22,6 +23,8 @@
   --border-color: #EDEDED;
 
   --side-padding : 32px;
+
+  --regular-font: "Inter";
 }
 
 #new-todo-button {
@@ -139,24 +142,34 @@ body {
 }
 
 .todo-item {
+    font-family: var(--regular-font);
+    font-size: 12px;
     width: 100%;
     border: 2px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--card-bg);
     display: grid;
     padding: 12px;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: 
         "check-box task-title-description" 
          "check-box task-date-priority";
+    gap: 4px 12px;     
+
 }
 
 .todo-item > .task-check {
     grid-area: check-box;
     place-self: center;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
 }
+
+.todo-item > .task-title-description-container > .task-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
 
 .todo-item > .task-title-description-container {
     grid-area: task-title-description;
@@ -168,6 +181,8 @@ body {
     grid-area: task-date-priority;
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: space-between;
 }
+
+
 
