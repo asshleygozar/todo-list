@@ -58,8 +58,32 @@ body {
 
 #side-bar {
     grid-area: side-bar;
+    padding: var(--side-padding);
     background-color: var(--bg-color);
+    border-right: 1px solid var(--border-color);
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "logo"
+                         "projects"
+                         "settings";
 
+}
+
+#projects {
+    font-family: var(--heading-font);
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#projects div {
+    transition: all 0.3s ease;
+}
+
+#projects div:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
 }
 
 #content {
@@ -68,6 +92,11 @@ body {
     gap: 16px;
     padding: var(--side-padding);
 }
+
+.logo {
+    grid-area: logo;
+}
+
 
 .header {
     height: 150px;
@@ -85,6 +114,7 @@ body {
     align-items: center;
     gap: 16px;
     padding: 16px 8px;
+    border-radius: 8px;
 }
 
 #content-priority {
