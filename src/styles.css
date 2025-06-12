@@ -1,4 +1,18 @@
 
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
 #new-todo-button {
     height: 100px;
     width: 100px;
@@ -12,9 +26,29 @@
 }
 
 body {
-    background-color: chartreuse;
     font-family: monospace;
+    height: 100vh;
 }
+
+#main-content {
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "side-bar main-content";
+}
+
+#side-bar {
+    grid-area: side-bar;
+    background-color: aquamarine;
+
+}
+
+#content {
+    grid-area: main-content;
+    background-color: brown;
+}
+
 
 #modal {
     display: flex;
