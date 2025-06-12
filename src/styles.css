@@ -84,6 +84,7 @@ body {
 #projects div:hover {
     background-color: var(--accent-blue);
     color: var(--bg-color);
+    cursor: pointer;
 }
 
 #content {
