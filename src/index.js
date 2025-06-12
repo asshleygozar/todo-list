@@ -28,7 +28,7 @@ class TodoUIGenerator {
         const taskDescription = document.getElementById("task-description").value;
         const taskPriority = document.getElementById("task-priority").value;
         const taskDueDate = document.getElementById("task-due-date").value;
-        const formatTaskDueDate = format(taskDueDate, 'MMMM, dd, yyyy');
+        const formatTaskDueDate = format(taskDueDate, 'MMMM dd, yyyy');
 
         const myTodo = new Todo(taskTitle, taskDescription, formatTaskDueDate, taskPriority);
         this.todoList.push(myTodo);
