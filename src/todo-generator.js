@@ -80,17 +80,21 @@ export function addTodoModalCard() {
 export function taskDetails() {
     // Todo List Card
     const todoBox = document.createElement("div");
+    const todoCheckBox = document.createElement("input");
     const todoTitle = document.createElement("p");
     const todoDescription = document.createElement("p");
     const todoPriority = document.createElement("p");
     const todoDueDate = document.createElement("p");
 
+    todoCheckBox.classList = "task-check";
+    todoCheckBox.type = "checkbox";
     todoTitle.classList = "task-title";
     todoDescription.classList = "task-description";
     todoPriority.classList = "task-priority";
     todoDueDate.classList = "task-due-date";
     todoBox.classList = "todo-item";
     
+    todoBox.appendChild(todoCheckBox);
     todoBox.appendChild(todoTitle);
     todoBox.appendChild(todoDescription);
     todoBox.appendChild(todoPriority);
