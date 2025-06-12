@@ -20,6 +20,8 @@
   --text-color: #2D2D2D;
   --card-bg:#FFFFFF;
   --border-color: #EDEDED;
+
+  --side-padding : 32px;
 }
 
 #new-todo-button {
@@ -51,15 +53,46 @@ body {
 
 #side-bar {
     grid-area: side-bar;
-    background-color: aquamarine;
+    background-color: var(--bg-color);
 
 }
 
 #content {
-    grid-area: main-content;
-    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: var(--side-padding);
 }
 
+.header {
+    height: 150px;
+    background-color: var(--accent-green);
+}
+
+#content-priority {
+    grid-area: main-content;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "high-priority medium-priority low-priority";
+    gap: 16px;
+    height: 100%;
+}
+
+#high-priority {
+    grid-area: high-priority;
+    background-color: var(--accent-red);
+}
+
+#medium-priority {
+    grid-area: medium-priority;
+    background-color: var(--accent-yellow);
+}
+
+#low-priority {
+    grid-area: low-priority;
+    background-color: var(--accent-blue);
+}
 
 #modal {
     display: flex;
@@ -68,12 +101,13 @@ body {
     height: 320px;
     width: 250px;
     padding: 16px;
-    border: 2px solid black;
+    border: 2px solid  var(--border-color);
     border-radius: 8px;
     position: fixed;
     top: 100px;
     left: 500px;
     visibility: visible;
+    background-color: var(--card-bg);
 }
 
 #modal-invisible {
@@ -83,7 +117,7 @@ body {
     height: 320px;
     width: 250px;
     padding: 16px;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     position: fixed;
     top: 100px;
@@ -99,9 +133,9 @@ body {
 .todo-item {
     width: 200px;
     height: 280px;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--card-bg);
     display: flex;
     padding: 16px;
     flex-direction: column;
