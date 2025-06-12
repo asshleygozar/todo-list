@@ -69,6 +69,14 @@ body {
     background-color: var(--accent-green);
 }
 
+.priority-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 8px;
+}
+
 #content-priority {
     grid-area: main-content;
     background-color: var(--bg-color);
@@ -131,15 +139,35 @@ body {
 }
 
 .todo-item {
-    width: 200px;
-    height: 280px;
+    width: 100%;
     border: 2px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--card-bg);
+    display: grid;
+    padding: 12px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "check-box task-title-description" 
+         "check-box task-date-priority";
+}
+
+.todo-item > .task-check {
+    grid-area: check-box;
+    place-self: center;
+    width: 25px;
+    height: 25px;
+}
+
+.todo-item > .task-title-description-container {
+    grid-area: task-title-description;
     display: flex;
-    padding: 16px;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
+}
+
+.todo-item > .task-date-priority-container {
+    grid-area: task-date-priority;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
