@@ -22,7 +22,6 @@
   --border-color: #EDEDED;
 }
 
-
 #new-todo-button {
     height: 100px;
     width: 100px;
@@ -44,6 +43,7 @@ body {
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 4fr;
     grid-template-areas: "side-bar main-content";
