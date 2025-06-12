@@ -18,6 +18,9 @@ class TodoUIGenerator {
     constructor(modal) {
         this.todoList = [];
         this.container = document.getElementById("content");
+        this.highPriorityContainer = document.getElementById("high-priority");
+        this.mediumPriorityContainer = document.getElementById("medium-priority");
+        this.lowPriorityContainer = document.getElementById("low-priority");
         this.modal = modal;
         this.listenersAttached = false;
     }
@@ -38,8 +41,8 @@ class TodoUIGenerator {
     }
 
     generateTodoCardUI() {
-        this.container.innerHTML = "";
-    
+        this.clearPriorityContainer();
+
         for (let task of this.todoList) {
             
             const card = taskDetails();
@@ -56,6 +59,18 @@ class TodoUIGenerator {
             todoDueDate.textContent = task.dueDate;
             
             this.container.appendChild(card);
+            
+            switch(task.priority) {
+                case 'high-priority':
+                    this.highPriorityContainer.appendChild(card);
+                    break;
+                case 'medium-priority':
+                    this.mediumPriorityContainer.appendChild(card);
+                    break;
+                case 'low-priority':
+                    this.lowPriorityContainer.appendChild(card);
+                    break;        
+            }
         } 
     }
 
@@ -63,6 +78,12 @@ class TodoUIGenerator {
         document.getElementById("task-title").value = "";
         document.getElementById('task-description').value = "";
         document.getElementById('task-due-date').value = "";
+    }
+
+    clearPriorityContainer() {
+        this.highPriorityContainer.innerHTML = "";
+        this.mediumPriorityContainer.innerHTML = "";
+        this.lowPriorityContainer.innerHTML = "";
     }
 
     
