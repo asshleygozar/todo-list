@@ -31,10 +31,11 @@ body {
 }
 
 #main-content {
-    max-width: 1400px;
+    margin: 0 auto;
+    max-width: 1600px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
     grid-template-areas: "side-bar main-content";
 }
 
