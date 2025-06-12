@@ -1,3 +1,4 @@
+
 const contentContainer = document.getElementById("content");
 
 
@@ -81,24 +82,35 @@ export function taskDetails() {
     // Todo List Card
     const todoBox = document.createElement("div");
     const todoCheckBox = document.createElement("input");
+    const todoDetailsContainer = document.createElement("div");
     const todoTitle = document.createElement("p");
     const todoDescription = document.createElement("p");
+    const todoDatePriorityContainer = document.createElement("div");
     const todoPriority = document.createElement("p");
     const todoDueDate = document.createElement("p");
 
     todoCheckBox.classList = "task-check";
     todoCheckBox.type = "checkbox";
+
     todoTitle.classList = "task-title";
     todoDescription.classList = "task-description";
+    todoDetailsContainer.classList = "task-title-description-container";
+
+    todoDatePriorityContainer.classList = "task-date-priority-container";
     todoPriority.classList = "task-priority";
     todoDueDate.classList = "task-due-date";
+
     todoBox.classList = "todo-item";
+
+    todoDetailsContainer.appendChild(todoTitle);
+    todoDetailsContainer.appendChild(todoDescription);
+
+    todoDatePriorityContainer.appendChild(todoPriority);
+    todoDatePriorityContainer.appendChild(todoDueDate);
     
     todoBox.appendChild(todoCheckBox);
-    todoBox.appendChild(todoTitle);
-    todoBox.appendChild(todoDescription);
-    todoBox.appendChild(todoPriority);
-    todoBox.appendChild(todoDueDate);
+    todoBox.appendChild(todoDetailsContainer);
+    todoBox.appendChild(todoDatePriorityContainer);
 
     return todoBox;
 }
