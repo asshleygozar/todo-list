@@ -17,7 +17,6 @@ class Todo {
 class TodoUIGenerator {
     constructor(modal) {
         this.todoList = [];
-        this.container = document.getElementById("content");
         this.highPriorityContainer = document.getElementById("high-priority");
         this.mediumPriorityContainer = document.getElementById("medium-priority");
         this.lowPriorityContainer = document.getElementById("low-priority");
@@ -57,8 +56,6 @@ class TodoUIGenerator {
             todoDescription.textContent = task.description;
             todoPriority.textContent = task.priority;
             todoDueDate.textContent = task.dueDate;
-            
-            this.container.appendChild(card);
             
             switch(task.priority) {
                 case 'high-priority':
