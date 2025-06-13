@@ -89,14 +89,16 @@ class TodoUIGenerator {
         this.clearModalInputs();
 
         if (!this.listenersAttached) {
-            const addTask = document.getElementById("add-task");
+            const addTask = document.getElementById("todo-add-task");
             const cancelTask = document.getElementById("cancel");
 
             cancelTask.addEventListener('click', (e) => {
                 e.stopPropagation();
                 this.hideModal();
             });
+
             addTask.addEventListener('click', (e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 this.saveTodoToUi();
             });
