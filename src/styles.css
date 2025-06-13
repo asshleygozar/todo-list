@@ -144,19 +144,52 @@ body {
 }
 
 #modal {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(4, 2fr) 1fr;
     gap: 16px;
-    height: 320px;
-    width: 250px;
-    padding: 16px;
+    width: min(100%, 600px);
+    padding: var(--side-padding);
     border: 2px solid  var(--border-color);
     border-radius: 8px;
     position: fixed;
-    top: 100px;
-    left: 500px;
     visibility: visible;
+    top: 60px;
+    left: 450px;
     background-color: var(--card-bg);
+}
+
+#task-title, #task-description, #task-priority, #task-due-date {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    font-family: var(--regular-font);
+}
+
+#modal > .modal-label {
+    font-family: var(--regular-font);
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+#todo-add-task {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-green);
+}
+
+#cancel {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-red);
 }
 
 #modal-invisible {
@@ -169,9 +202,7 @@ body {
     border: 2px solid var(--border-color);
     border-radius: 8px;
     position: fixed;
-    top: 100px;
-    left: 500px;
-    visibility: hidden;
+    visibility: collapse;
 }
 
 #modal > div {
