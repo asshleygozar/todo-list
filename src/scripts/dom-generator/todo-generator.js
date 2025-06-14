@@ -1,6 +1,3 @@
-import { format } from 'date-fns';
-const contentContainer = document.getElementById("content");
-
 
 export function addTodoModalCard() {
 
