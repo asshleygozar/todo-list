@@ -1,0 +1,17 @@
+#projects {
+    font-family: var(--heading-font);
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#projects div {
+    transition: all 0.3s ease;
+}
+
+#projects div:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+    cursor: pointer;
+}
