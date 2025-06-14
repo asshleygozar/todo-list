@@ -1,0 +1,15 @@
+#todo-add-task {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-green);
+}
+
+#cancel {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-red);
+}
