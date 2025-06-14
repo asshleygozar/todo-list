@@ -87,23 +87,33 @@ class TodoUIGenerator {
     showModal() {
         this.modalVisible(false);
         this.clearModalInputs();
+        this.initializeModalAction();
+    }
 
-        if (!this.listenersAttached) {
-            const addTask = document.getElementById("todo-add-task");
-            const cancelTask = document.getElementById("cancel");
+    initializeModalAction() {
+
+        const cancelTask = document.getElementById("cancel"); 
+        const form = document.getElementById('modal');
+
+        if(!this.listenersAttached) {
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                this.saveTodoToUi();
+            } );
 
             cancelTask.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.hideModal();
-            });
-
-            addTask.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.saveTodoToUi();
-            });
-            this.listenersAttached = true;
-        }
+                    e.stopPropagation();
+                    this.hideModal();
+                });
+                
+                this.listenersAttached = true;
+        } 
     }
 
     hideModal() {
