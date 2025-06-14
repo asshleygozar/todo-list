@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --accent-red: #F28B82;
+  --accent-green: #A8D5BA;
+  --accent-blue: #AECBFA;
+  --accent-yellow: #FDDFAF;
+
+  --bg-color: #FFFDF9;
+  --text-color: #2D2D2D;
+  --card-bg:#FFFFFF;
+  --border-color: #EDEDED;
+
+  --side-padding : 32px;
+
+  --regular-font: "Inter";
+  --heading-font: "Urbanist";
+}
+
+#new-todo-button {
+    padding: 0.5rem 1rem;
+    width: min(100%, 100px);
+    height: auto;
+    border-radius: 4px;
+    background-color: var(--accent-red);
+    color: white;
+    font-size: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+
+body {
+    font-family: monospace;
+    height: 100vh;
+}
+
+#main-content {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-areas: "side-bar main-content";
+}
+
+#side-bar {
+    grid-area: side-bar;
+    padding: var(--side-padding);
+    background-color: var(--bg-color);
+    border-right: 1px solid var(--border-color);
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "logo"
+                         "projects"
+                         "settings";
+
+}
+
+#projects {
+    font-family: var(--heading-font);
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#projects div {
+    transition: all 0.3s ease;
+}
+
+#projects div:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: var(--side-padding);
+}
+
+.logo {
+    grid-area: logo;
+}
+
+
+.header {
+    height: 150px;
+    display: flex;
+}
+
+.header > h1 {
+    font-family: var(--heading-font);
+    align-self: flex-end;
+}
+
+.priority-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 8px;
+    border-radius: 8px;
+}
+
+#content-priority {
+    grid-area: main-content;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "high-priority medium-priority low-priority";
+    gap: 16px;
+    height: 100%;
+}
+
+#high-priority {
+    grid-area: high-priority;
+    background-color: var(--accent-red);
+}
+
+#medium-priority {
+    grid-area: medium-priority;
+    background-color: var(--accent-yellow);
+}
+
+#low-priority {
+    grid-area: low-priority;
+    background-color: var(--accent-blue);
+}
+
+#modal {
+    display: grid;
+    grid-template-rows: repeat(4, 2fr) 1fr;
+    gap: 16px;
+    width: min(100%, 600px);
+    padding: var(--side-padding);
+    border: 2px solid  var(--border-color);
+    border-radius: 8px;
+    position: fixed;
+    visibility: visible;
+    top: 60px;
+    left: 450px;
+    background-color: var(--card-bg);
+}
+
+#task-title, #task-description, #task-priority, #task-due-date {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    font-family: var(--regular-font);
+}
+
+#modal > .modal-label {
+    font-family: var(--regular-font);
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+#todo-add-task {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-green);
+}
+
+#cancel {
+    font-family: var(--regular-font);
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color: var(--accent-red);
+}
+
+#modal-invisible {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 320px;
+    width: 250px;
+    padding: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    position: fixed;
+    visibility: collapse;
+}
+
+#modal > div {
+   display: flex;
+   justify-content: space-between;
+}
+
+.todo-item {
+    font-family: var(--regular-font);
+    font-size: 12px;
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    display: grid;
+    padding: 12px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "check-box task-title-description" 
+         "check-box task-date-priority";
+    gap: 4px 12px;     
+
+}
+
+.todo-item > .task-check {
+    grid-area: check-box;
+    place-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+.todo-item > .task-title-description-container > .task-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.todo-item > .task-title-description-container {
+    grid-area: task-title-description;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item > .task-date-priority-container {
+    grid-area: task-date-priority;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 760px) {
+
+    .header {
+       align-self: center;
+    }
+    #side-bar {
+        display: none;
+    }
+
+    #main-content {
+        display: block;
+    }
+    #high-priority {
+        width: 100vw;
+        height: 300px;
+    }
+    #medium-priority {
+        width: 100vw;
+        height: 300px;
+    }
+    #low-priority {
+        width: 100vw;
+        height: 300px;
+    }
+    #content-priority {
+        overflow-x: scroll;
+        padding: none;
+    }
+}
