@@ -4,7 +4,7 @@ const { watchFile } = require("fs");
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: "./src/scripts/index.js",
     output: {
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
