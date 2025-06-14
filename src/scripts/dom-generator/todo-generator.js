@@ -5,7 +5,7 @@ const contentContainer = document.getElementById("content");
 export function addTodoModalCard() {
 
     // Todo List Modal Add Card
-    const modalBox = document.createElement("div");
+    const modalBox = document.createElement("form");
     const taskNameLabel = document.createElement("label");
     const taskNameInput = document.createElement("input");
     const taskDescriptionLabel = document.createElement("label");
@@ -29,6 +29,7 @@ export function addTodoModalCard() {
     taskNameInput.placeholder = "Task title";
     taskNameInput.name = "task-title";
     taskNameInput.id = "task-title";
+    taskNameInput.required = true;
     taskNameLabel.appendChild(taskNameInput);
 
     // Task Description
@@ -58,13 +59,11 @@ export function addTodoModalCard() {
     taskPriorityLabel.appendChild(taskPrioritySelect);
 
     // Task Due Date
-    const formattedDate = format(new Date(), 'yyyy-MM-dd');
     taskDueDateLabel.textContent = "Due Date";
     taskDueDateLabel.classList.add("modal-label");
     taskDueDate.type = "date";
     taskDueDate.name = "task-due-date";
     taskDueDate.id = "task-due-date";
-    taskDueDate.defaultValue = formattedDate;
     taskDueDateLabel.appendChild(taskDueDate);
 
     // Create and Cancel Buttons
@@ -77,6 +76,7 @@ export function addTodoModalCard() {
     createButtonContainer.appendChild(cancelTodoButton);
 
     modalBox.id = "modal-invisible"; 
+    modalBox.noValidate = false;
     modalBox.appendChild(taskNameLabel);
     modalBox.appendChild(taskDescriptionLabel);
     modalBox.appendChild(taskPriorityLabel);
