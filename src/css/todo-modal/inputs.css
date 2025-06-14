@@ -1,0 +1,16 @@
+#task-title, #task-description, #task-priority, #task-due-date {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    font-family: var(--regular-font);
+}
+
+#modal > .modal-label {
+    font-family: var(--regular-font);
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
