@@ -88,6 +88,7 @@ class TodoUIGenerator {
         this.modalVisible(false);
         this.clearModalInputs();
         this.initializeModalAction();
+        this.initializeTodayDate();
     }
 
     initializeModalAction() {
@@ -114,6 +115,13 @@ class TodoUIGenerator {
                 
                 this.listenersAttached = true;
         } 
+    }
+
+    initializeTodayDate() {
+        const taskDueDate = document.getElementById('task-due-date');
+        const formattedDate = format(new Date(), "yyyy-MM-dd");
+
+        taskDueDate.value = formattedDate;
     }
 
     hideModal() {
