@@ -1,0 +1,16 @@
+:root {
+  --accent-red: #F28B82;
+  --accent-green: #A8D5BA;
+  --accent-blue: #AECBFA;
+  --accent-yellow: #FDDFAF;
+
+  --bg-color: #FFFDF9;
+  --text-color: #2D2D2D;
+  --card-bg:#FFFFFF;
+  --border-color: #EDEDED;
+
+  --side-padding : 32px;
+
+  --regular-font: "Inter";
+  --heading-font: "Urbanist";
+}
