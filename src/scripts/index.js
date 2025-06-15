@@ -126,7 +126,8 @@ class TodoUIGenerator {
             this.todoList = this.todoList.filter(todo => todo.id !== idToRemove);
             const card  = e.target.closest('.todo-item');
             if (card) {
-                card.remove();
+                card.classList.add('fade-out');
+                setTimeout(() => card.remove(), 300);
             }
         }
     }
