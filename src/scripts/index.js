@@ -45,17 +45,20 @@ class TodoUIGenerator {
         for (let task of this.todoList) {
             
             const card = taskDetails();
+            const checkBox = card.querySelector('.task-check');
 
             const todoTitle = card.querySelector(".task-title");
             const todoDescription = card.querySelector(".task-description");
             const todoPriority = card.querySelector(".task-priority");
             const todoDueDate = card.querySelector(".task-due-date");
 
-            card.id = task.id;
+            checkBox.id = task.id;
             todoTitle.textContent = task.title;
             todoDescription.textContent = task.description;
             todoPriority.textContent = task.priority;
             todoDueDate.textContent = task.dueDate;
+
+            checkBox.addEventListener('change', (e) => this.removeTodoList(e));
             
             switch(task.priority) {
                 case 'high-priority':
@@ -111,10 +114,21 @@ class TodoUIGenerator {
             cancelTask.addEventListener('click', (e) => {
                     e.stopPropagation();
                     this.hideModal();
-                });
-                
+                });                
                 this.listenersAttached = true;
         } 
+    }
+
+    removeTodoList(e) {
+        const idToRemove = e.target.id;
+
+        if (e.target.checked) {
+            this.todoList = this.todoList.filter(todo => todo.id !== idToRemove);
+            const card  = e.target.closest('.todo-item');
+            if (card) {
+                card.remove();
+            }
+        }
     }
 
     initializeTodayDate() {
