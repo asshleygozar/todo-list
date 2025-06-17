@@ -20,7 +20,13 @@
     place-self: center;
     width: 24px;
     height: 24px;
+    border-radius: 50%;
+    border: 2px solid black;
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+    background-color: var(--accent-red);
 }
+
 
 .todo-item > .task-title-description-container > .task-title {
     font-size: 14px;
