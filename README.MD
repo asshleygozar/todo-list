@@ -11,10 +11,10 @@ This is a front-end productivity web application build using Html + Css + JavaSc
 
 
 ## Features
-- <a href="task-management">Task management</a>
-- <a href="sort-tasks">Sorts tasks based on priority level</a>
-- <a href="project-organization">Project organization using tags and folders</a>
-- <a href="data-local-storage">Data local storage</a>
+- [Task Management](#task-management)
+- [Sorts tasks based on priority level](#sort-tasks)
+- [Project organization using tags and folders](#project-organization)
+- [Data local storage](#data-local-storage)
 
 ### Task Management
 To be updated soon.
