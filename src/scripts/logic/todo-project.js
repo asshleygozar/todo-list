@@ -1,15 +1,12 @@
-class TodoProject {
+export default class TodoProject {
+  constructor() {
+    this.projects = [];
+  }
 
-    constructor() {
-        this.projects = [];
-    }
+  createNewProject(projectName) {
+    const newProject = {};
+    newProject[projectName] = {};
 
-    createNewProject(projectName) {
-       const newProject = new Object();
-       newProject[projectName] = new Object();
-
-       this.projects.push(newProject);
-    }
+    this.projects.push(newProject);
+  }
 }
-
-

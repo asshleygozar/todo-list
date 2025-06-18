@@ -1,18 +1,16 @@
-
 export function newProject() {
-    // New feature: create new project directory | folder for organization
-    const newProject = document.createElement('div');
+  // New feature: create new project directory | folder for organization
+  const project = document.createElement('div');
 
-    newProject.classList = 'project-folder';
+  project.classList = 'project-folder';
 
-    return newProject;
+  return project;
 }
 
 export function newProjectItem() {
-    const newProjectItem = document.createElement('p');
+  const projectItem = document.createElement('p');
 
-    newProjectItem.classList = 'project-item';
+  projectItem.classList = 'project-item';
 
-    return newProjectItem;
+  return projectItem;
 }
-
