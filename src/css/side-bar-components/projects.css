@@ -6,13 +6,50 @@
   gap: 16px;
 }
 
-#projects div {
+.project-name {
   transition: all 0.3s ease;
   padding-left: 8px;
+  line-height: 1.5;
 }
 
-#projects div:hover {
+.project-name:hover {
   background-color: var(--accent-blue);
   color: var(--bg-color);
   cursor: pointer;
+}
+
+.project-folder {
+  position: relative;
+  height: auto;
+}
+
+.project-item-container {
+	background: white;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 0.4s ease, opacity 0.4s ease;
+	pointer-events: none;
+	border-radius: 6px;
+  padding: 8px 16px;
+  display: none;
+}
+
+.project-item-container p {
+  padding-left: 8px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.project-item-container p:hover {
+  background-color: var(--accent-green);
+  color: white;
+  cursor: pointer;
+}
+
+.project-folder:hover .project-item-container {
+  max-height: max-content; 
+	opacity: 1;
+	pointer-events: auto;
+  display: block;
 }
