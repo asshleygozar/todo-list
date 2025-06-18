@@ -1,53 +1,50 @@
 .todo-item {
-    font-family: var(--regular-font);
-    font-size: 12px;
-    width: 100%;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--card-bg);
-    display: grid;
-    padding: 12px;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: 
-        "check-box task-title-description" 
-         "check-box task-date-priority";
-    gap: 4px 12px;     
-
+  font-family: var(--regular-font);
+  font-size: 12px;
+  width: 100%;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  display: grid;
+  padding: 12px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    'check-box task-title-description'
+    'check-box task-date-priority';
+  gap: 4px 12px;
 }
 
 .todo-item > .task-check {
-    grid-area: check-box;
-    place-self: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid black;
-    appearance: auto;
-    clip-path: circle(50% at 50% 50%);
-    background-color: var(--accent-red);
+  grid-area: check-box;
+  place-self: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid black;
+  appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: var(--accent-red);
 }
-
 
 .todo-item > .task-title-description-container > .task-title {
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-
 .todo-item > .task-title-description-container {
-    grid-area: task-title-description;
-    display: flex;
-    flex-direction: column;
+  grid-area: task-title-description;
+  display: flex;
+  flex-direction: column;
 }
 
 .todo-item > .task-date-priority-container {
-    grid-area: task-date-priority;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  grid-area: task-date-priority;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }

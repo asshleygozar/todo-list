@@ -1,14 +1,13 @@
 .logo {
-    grid-area: logo;
+  grid-area: logo;
 }
 
-
 .header {
-    height: 150px;
-    display: flex;
+  height: 150px;
+  display: flex;
 }
 
 .header > h1 {
-    font-family: var(--heading-font);
-    align-self: flex-end;
+  font-family: var(--heading-font);
+  align-self: flex-end;
 }

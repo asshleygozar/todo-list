@@ -1,16 +1,16 @@
 :root {
-  --accent-red: #F28B82;
-  --accent-green: #A8D5BA;
-  --accent-blue: #AECBFA;
-  --accent-yellow: #FDDFAF;
+  --accent-red: #f28b82;
+  --accent-green: #a8d5ba;
+  --accent-blue: #aecbfa;
+  --accent-yellow: #fddfaf;
 
-  --bg-color: #FFFDF9;
-  --text-color: #2D2D2D;
-  --card-bg:#FFFFFF;
-  --border-color: #EDEDED;
+  --bg-color: #fffdf9;
+  --text-color: #2d2d2d;
+  --card-bg: #ffffff;
+  --border-color: #ededed;
 
-  --side-padding : 32px;
+  --side-padding: 32px;
 
-  --regular-font: "Inter";
-  --heading-font: "Urbanist";
+  --regular-font: 'Inter';
+  --heading-font: 'Urbanist';
 }
