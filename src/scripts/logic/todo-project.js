@@ -10,3 +10,4 @@ export default class TodoProject {
     this.projects.push(newProject);
   }
 }
+
