@@ -1,9 +1,4 @@
-import {
-  newProject,
-  newProjectItem,
-  projectItemContent,
-  projectTagItemsContainer,
-} from '../dom/project-generator';
+import { newProject, newProjectItem, projectItemContent, projectTagItemsContainer } from '../dom/project-generator';
 import TodoProject from '../logic/todo-project';
 
 export default class TodoSideBar {
@@ -29,9 +24,7 @@ export default class TodoSideBar {
 
             projectItemDom.textContent = item;
             projectItemDom.id = itemTagID;
-            projectItemDom.addEventListener('click', (e) =>
-              this.renderTagsItems(e)
-            );
+            projectItemDom.addEventListener('click', (e) => this.renderTagsItems(e));
             tagItemContainer.textContent = item;
             tagItemContainer.setAttribute('data-id', itemTagID);
             itemContainer.appendChild(projectItemDom);
