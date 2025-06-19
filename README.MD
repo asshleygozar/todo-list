@@ -1,9 +1,6 @@
-<h1 align="center">To-do List</h1>
-<div align="center">
-    
-    **`Productivity`**
+<h1 align="center">TTo-do List</h1>
 
-</div>
+ **`Management`** **`Productivity`**
 
 ## Overview
 This is a front-end productivity web application build using Html + Css + JavaScript. It is develop to help users to track their daily, weekly, and monthly tasks with neat and clean ui design to enforce productivity.   
@@ -19,7 +16,9 @@ This To-do List web application is currently under active development. Additiona
 
 ## Code Style
 This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
 To ensure consistent formatting across files ,[Prettier](https://github.com/prettier/prettier) is used alongside ESlint.
+
 The configuration also includes [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to prevent conflicts between ESlint and Prettier rules.
 
 ## Features
