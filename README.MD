@@ -38,4 +38,4 @@ Provides user with an intuitive interface for creating, organizing, and tracking
 Tasks are automatically organized into columns based on their priority level, allowing users to quickly identify and focus on the most important tasks first.
 
 ## License
-This software web application is under MIT License for more information about the license please read the [LICENSE](/LICENSE).
+This software web application is developed for viewing purposes only for more information please read the [LICENSE](/LICENSE).
