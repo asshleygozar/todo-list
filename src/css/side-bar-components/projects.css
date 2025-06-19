@@ -10,6 +10,8 @@
   transition: all 0.3s ease;
   padding-left: 8px;
   line-height: 1.5;
+  color: grey;
+  font-weight: 600;
 }
 
 .project-name:hover {
@@ -24,13 +26,15 @@
 }
 
 .project-item-container {
-	background: white;
-	overflow: hidden;
-	max-height: 0;
-	opacity: 0;
-	transition: max-height 0.4s ease, opacity 0.4s ease;
-	pointer-events: none;
-	border-radius: 6px;
+  background: white;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: 6px;
   padding: 8px 16px;
   display: none;
 }
@@ -48,8 +52,14 @@
 }
 
 .project-folder:hover .project-item-container {
-  max-height: max-content; 
-	opacity: 1;
-	pointer-events: auto;
+  max-height: max-content;
+  opacity: 1;
+  pointer-events: auto;
   display: block;
+}
+
+div[data-id] {
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
 }
