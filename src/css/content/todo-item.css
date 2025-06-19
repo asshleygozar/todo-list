@@ -48,3 +48,23 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+.task-priority.high-priority {
+  background-color: var(--accent-red);
+  color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.task-priority.medium-priority {
+  background-color: var(--accent-yellow);
+  color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
+.task-priority.low-priority {
+  background-color: var(--accent-blue);
+  color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
