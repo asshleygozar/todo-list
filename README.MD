@@ -12,7 +12,10 @@ This is a front-end productivity web application built using HTML + CSS + JavaSc
 
 <img align="left" alt="Eslint" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg" />
           
-<img alt="Javascript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+<img align="left" alt="NodeJs" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+
+<img alt="Webpack" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" />
+          
 
 ## Build Status
 This To-do List web application is currently under active development. Additional features are being implemented to meet the core functionality and standards expected of a productivity tool.
