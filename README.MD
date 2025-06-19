@@ -1,4 +1,4 @@
-<h1 align="center">TTo-do List</h1>
+<h1 align="center">To-do List</h1>
 
  **`Management`** **`Productivity`**
 
@@ -17,7 +17,7 @@ This To-do List web application is currently under active development. Additiona
 ## Code Style
 This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
-To ensure consistent formatting across files ,[Prettier](https://github.com/prettier/prettier) is used alongside ESlint.
+To ensure consistent formatting across files, [Prettier](https://github.com/prettier/prettier) is used alongside ESlint.
 
 The configuration also includes [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to prevent conflicts between ESlint and Prettier rules.
 
