@@ -17,7 +17,7 @@ export default class TodoService {
       taskTitle,
       formatTaskDueDate,
       taskPriority,
-      taskDescription,
+      taskDescription
     );
     this.todoList.push(myTodo);
   }
