@@ -5,6 +5,8 @@
   border: 2px solid var(--border-color);
   border-radius: 4px;
   background-color: var(--card-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); 
+  transition: box-shadow 0.3s ease;
   display: grid;
   padding: 12px;
   grid-template-columns: 1fr 4fr;
@@ -14,16 +16,50 @@
   gap: 4px 12px;
 }
 
+.todo-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 .todo-item > .task-check {
+  appearance: none;
   grid-area: check-box;
   place-self: center;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  border: 2px solid black;
-  appearance: auto;
-  clip-path: circle(50% at 50% 50%);
   background-color: var(--accent-red);
+  cursor: pointer;
+  position: relative;
+  border: none;
+  outline: none;
+  transition: background-color 1.5s;
+}
+
+.task-check::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 4px;
+  border: 2px solid white;
+  border-width: 0 0 2px 2px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.task-check:checked {
+  background-color: var(--accent-red);
+}
+
+.task-check:checked::after {
+  opacity: 1;
+}
+
+.task-check:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .todo-item > .task-title-description-container > .task-title {
@@ -46,7 +82,7 @@
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 2s ease;
 }
 
 .task-priority.high-priority {
