@@ -1,4 +1,7 @@
-# To Do List
+<h1 align="center">To-do List</h1>
+<div align="center">
+    **`Productivity`**
+</div>
 
 ## Overview
 This is a front-end productivity web application build using Html + Css + JavaScript. It is develop to help users to track their daily, weekly, and monthly tasks with neat and clean ui design to enforce productivity.   
