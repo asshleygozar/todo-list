@@ -30,7 +30,7 @@ export default class TodoService {
       const card = e.target.closest('.todo-item');
       if (card) {
         card.classList.add('fade-out');
-        setTimeout(() => card.remove(), 300);
+        setTimeout(() => card.remove(), 2000);
       }
     }
   }
