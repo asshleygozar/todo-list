@@ -33,15 +33,19 @@ export default class TodoUI {
 
       switch (todo.priority) {
         case 'high-priority':
+          todoPriority.classList.add('high-priority');
           this.highPriorityContainer.appendChild(card);
           break;
         case 'medium-priority':
+          todoPriority.classList.add('medium-priority');
           this.mediumPriorityContainer.appendChild(card);
           break;
         case 'low-priority':
+          todoPriority.classList.add('low-priority');
           this.lowPriorityContainer.appendChild(card);
           break;
         default:
+          todoPriority.classList.add('low-priority');
           this.lowPriorityContainer.appendChild(card);
           break;
       }
