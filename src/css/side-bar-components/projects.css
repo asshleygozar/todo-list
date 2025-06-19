@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.project-item {
+  font-size: 18px;
+}
+
 .project-folder:hover .project-item-container {
   max-height: max-content;
   opacity: 1;
