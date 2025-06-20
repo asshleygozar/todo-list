@@ -1,9 +1,9 @@
-<h1 align="center">To-do List</h1>
+# To-Do List 
 
  **`Management`** **`Productivity`**
 
 ## Overview
-This is a front-end productivity web application built using HTML + CSS + JavaScript. It was develop to help users to track their daily, weekly, and monthly tasks with neat and clean ui design to enforce productivity.   
+To-Do list is a web application develop to help user to track their daily, weekly, and monthly tasks. It also allows user to organize tasks based on their priority levels. 
 
 ## Technologies
 <img align="left"  alt="Html" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
