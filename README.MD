@@ -16,7 +16,12 @@ To-Do list is a web application develop to help user to track their daily, weekl
 ### Front End
 - HTML
 - CSS
-- JavaScript
+- JavaScript (Vanilla Js)
+
+### Other tools
+- Webpack
+- Eslint
+- Prettier
           
 ## Code Style
 This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
