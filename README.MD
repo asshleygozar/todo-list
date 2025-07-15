@@ -2,6 +2,15 @@
 
 To-Do list is a web application develop to help user to track their daily, weekly, and monthly tasks. The application provides different columns for different priorities from highest to lowest for efficient task filtering.
 
+## User Interface
+
+### To-do lists
+![Lists of todo list](./demo/todo_list_ui.png)
+
+### To-do list form
+![Todo list form](./demo/todo_list_todo_form.png)
+
+
 ## Technologies
 
 ### Front End
