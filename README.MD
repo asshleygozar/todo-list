@@ -35,3 +35,7 @@ Provides user with an intuitive interface for creating, organizing, and tracking
 ### Sort tasks
 Tasks are automatically organized into columns based on their priority level, allowing users to quickly identify and focus on the most important tasks first.
 
+## Suggested Improvements
+- Data persistence lightweight (local storage API)
+- Tags for different events
+- sort tasks by dates ASC or DESC
